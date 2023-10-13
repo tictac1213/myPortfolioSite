@@ -1,7 +1,10 @@
 * {
     /* background-color:rgb(43; */
     /* color: aliceblue; */
-    --primary-color: black;
+    --primary-color:aliceblue;
+    --navbar-color:rgb(71, 93, 219) ;
+    --navbar-text:rgb(7, 7, 7) ;
+    background-color: rgb(20, 19, 19);
     text-decoration: none;
     color: var(--primary-color);
     margin: 0px;
@@ -16,21 +19,28 @@
         position: sticky;
         top: 0px;
         display: flex;
-        height: 50px;
+        height: 40px;
         position: sticky;
-        
+        padding: 10px;
+        font-size: 1.25em;
+        background-color: var(--navbar-color);
+        color:var(--navbar-text);
 
     }
 
     header h1 {
         float: left;
+        background-color: var(--navbar-color);
+        color:var(--navbar-text) ;
     }
 
     nav {
-
+        float: left;
         display: flex;
         justify-content: right;
         margin-right: 20px;
+        background-color: var(--navbar-color);
+        color:var(--navbar-text);
 
     }
 
@@ -38,6 +48,8 @@
         justify-self: center;
         margin: auto 40px;
         float: right;
+        background-color: var(--navbar-color);
+        color:var(--navbar-text);
 
 
     }
@@ -54,23 +66,28 @@
 
     .Hbox {
         display: flex;
+        
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding-bottom: 18%;
     }
-
+    
     #intro {
         width: 60%;
+
         /* padding: 20%; */
     }
 
     #Hbox>h1,
     #Hbox>h4,
-    #Hbox>h2 {
+    #Hbox>h3 {
         text-align: center;
         padding: 5px;
         margin: 5px;
         max-width: 50%;
+        /* font-size: 1.5em; */
+
     }
 
     #Homeimg{
@@ -100,6 +117,7 @@
         border: 2px solid var(--primary-color);
         padding: 5px;
         border-radius: 5px;
+        margin-left: 20px;
     }
 
     .eduOrg,.skill{

@@ -87,6 +87,57 @@ html {
 
     }
 
+    
+
+
+    /* Add this to your existing CSS */
+.mobile-menu {
+    display: none;
+  }
+  
+  .menu-toggle {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bar {
+    background-color: var(--navbar-text);
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+  
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: var(--navbar-color);
+    color: var(--navbar-text);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-nav a {
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--navbar-text);
+    transition: background-color 0.3s;
+  }
+  
+  .mobile-nav a:hover {
+    background-color: var(--Hover-color);
+  }
+  
+
+
 
     
     .group {
@@ -399,4 +450,44 @@ html {
 
 
 
-@media (max-width:500px) {}
+@media (max-width:700px) {
+    nav{
+        display: none;
+    }
+    .navbar{
+        justify-content:end;
+    }
+    .mobile-menu {
+        display:inline-block ;
+        /* position: absolute; */
+        justify-self: end;
+        /* margin-right:20px ; */
+        padding-right: 10px;
+       
+      }
+
+      #logo {
+        float: left;
+        position:absolute;
+        left: 20px;
+        background-color: var(--navbar-color);
+        color:var(--navbar-text) ;
+    }
+    
+      /* .nav-bar {
+        display: none;
+      }
+    
+      .menu-toggle {
+        display: block;
+      }
+      */
+    
+      #mobile-nav {
+        z-index: 130;
+        height: 80vh;
+        width: 100vw;
+        background-color: #031d38;
+        opacity: 0.99;
+      }
+}

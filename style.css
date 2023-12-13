@@ -1,25 +1,53 @@
 * {
     /* background-color:rgb(43; */
     /* color: aliceblue; */
-    --primary-color:aliceblue;
-    --navbar-color:rgb(71, 93, 219) ;
-    --navbar-text:rgb(7, 7, 7) ;
-    background-color: rgb(20, 19, 19);
+    --primary-color:rgb(242, 244, 246);
+  
+    --navbar-text:rgb(253, 248, 248) ;
+
+    --Hover-color: aqua;
+  
     text-decoration: none;
     color: var(--primary-color);
     margin: 0px;
     padding: 0px;
+    font-family: 'Mullish';
+    
+    
 }
 .Big1-5{
     font-size: 1.5em;
 }
 
-@media (min-width: 500px) {
+/* scroll effect */
+html {
+   
+    /* Adjust the scroll speed by changing the duration value */
+    --scroll-duration: 2s;
+    --scroll-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --scroll-easing: var(--scroll-timing-function) var(--scroll-duration);
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    /* scroll-behavior: var(--scroll-easing); */
+  }
+  
+  
+
+.Page{
+    background: rgb(3,14,42);
+    background: linear-gradient(90deg, rgba(3,14,42,1) 0%, rgb(2, 36, 78) 100%);
+}
+
+
+
+
     header {
         position: sticky;
-        top: 0px;
+        background: rgb(3,14,42);
+        background: linear-gradient(90deg, rgba(3,14,42,1) 0%, rgb(2, 36, 78) 100%);
         display: flex;
-        height: 40px;
+        justify-content: space-around;
+        height: 50px;
         position: sticky;
         padding: 10px;
         font-size: 1.25em;
@@ -28,17 +56,22 @@
 
     }
 
-    header h1 {
+    #logo {
         float: left;
+        position:absolute;
+        left: 50px;
         background-color: var(--navbar-color);
         color:var(--navbar-text) ;
     }
 
     nav {
-        float: left;
+    
+        padding-left: 20%;
         display: flex;
-        justify-content: right;
-        margin-right: 20px;
+        width: 70vh;
+        /* margin-right: 20px; */
+        justify-content: space-around;
+        /* align-content: space-; */
         background-color: var(--navbar-color);
         color:var(--navbar-text);
 
@@ -46,13 +79,56 @@
 
     nav a {
         justify-self: center;
-        margin: auto 40px;
+       
         float: right;
         background-color: var(--navbar-color);
         color:var(--navbar-text);
 
 
     }
+
+
+    
+    .group {
+        position: relative;
+    }
+      
+    .custom-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    } 
+      
+    .custom-link {
+        color: white;
+        font-family: 'Mullish', sans-serif;
+        padding-top: 0.75rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+      
+    .group:hover .custom-link {
+        color: var(--Hover-color);
+    }
+      
+    .custom-line {
+        position: absolute;
+        bottom: 5px;
+        width: 30%;
+        min-width: 35px;
+        height: 2.5px;
+        background-color: var(--Hover-color);
+        display: none;
+        transition: all 0.2s;
+    }
+      
+    .group:hover .custom-line {
+        display: block;
+    }
+      
+
+      
+
 
     .Page {
         height: 90vh;
@@ -62,6 +138,8 @@
 
     #Home {
         display: flex;
+        background: rgb(3,14,42);
+        background: linear-gradient(90deg, rgba(3,14,42,1) 0%, rgb(2, 36, 78) 100%);
     }
 
     .Hbox {
@@ -120,7 +198,73 @@
         margin-left: 20px;
     }
 
-    .eduOrg,.skill{
+  
+
+    #OrgCont{
+        margin-top: 30px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    .eduOrg{
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--primary-color);
+        max-width: 560px;
+        /* height: minmax(70vh,1200px) ; */
+        height: 70vh;
+        margin: 10px;
+        border-radius: 20px;
+        padding: 15px;
+        box-sizing: border-box;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+        
+    }
+    
+    .eduOrg ul {
+        text-align: center;
+        list-style-position: inside;
+      }
+
+    .eduOrgImg {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        height: 60%;
+    }
+    
+    .eduOrgImg img{
+        border-radius: 15px;
+        width: 80%;
+        height: 90%;
+    }
+    .eduOrgInfo{
+        margin: 10px;
+        padding: 10px;
+        /* align-content: center; */
+    }
+    
+
+    #Skills{
+        display: grid;
+        grid-column: 80vw 20vw;
+        grid-row: 1vh 45vh 45vh;
+        grid-template-areas: 
+        "head head"
+        "skill1 pro"
+        "skill2 pro";
+    }
+
+    #Skills > h1{
+        grid-area: head;
+    }
+
+    .skill{
+        grid-area: skill1;
         display: flex;
         flex-direction: row;
         border: 2px solid var(--primary-color);
@@ -130,27 +274,42 @@
         box-sizing: border-box;
         padding: 10px;
         margin: 20px;
-        height: 40%;
+        /* height: 40%; */
         /* justify-content: center; */
         align-items: center;
     }
     
-    #eduOrg2,#skill2{
+    
+    #Profile{
+        
+        grid-area: pro;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+
+    }
+
+    #Profile img{
+
+        height: 55px;
+        border-radius: 4px;
+
+    }
+    
+    
+    #skill2{
+        grid-area: skill2;
         flex-direction: row-reverse;
     }
     
-    .eduOrgImg {
-        width: 30%;
-        margin: 10px;
-        height: 90%;
-    }
-    
-    .eduOrgImg img,.skillImg img{
+    .skillImg img{
         border-radius: 15px;
         width: 100%;
         height: 90%;
     }
-    .eduOrgInfo,.skillInfo{
+    .skillInfo{
         margin: 10px;
         padding: 10px;
     }
@@ -159,19 +318,20 @@
         display: flex;
         /* flex-direction: column; */
         justify-content: space-around;
-        padding: 10px;
-        margin: 10px;
-
+        padding: 20px;
+        background: rgb(3,14,42);
+        background: linear-gradient(90deg, rgba(3,14,42,1) 0%, rgb(2, 36, 78) 100%);
 
     }
 
     footer img{
+        
         height: 50px;
         width: 50px;
         border-radius: 4px;
     }
     
 
-}
+
 
 @media (max-width:500px) {}

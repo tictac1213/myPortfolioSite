@@ -5,17 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./items/logo.jpg" type="image/x-icon">
+    <script src="./script.js"></script>
+    
 </head>
 <body>
-    <header>
-        <h1 class="logo">Portfolio</h1>
-        <nav>
-            <a href="#Home">Home</a>
-            <a href="#About_Me">About Me</a>
-            <a href="#Education">Education</a>
-            <a href="#Skills">Skills </a>
-            <a href="#Contact">Contact</a>
+    <header class="navbar">
+
+            <div id="logo">
+                <img src="./items/logo.jpg" alt="Portfolio" height="50px">
+            </div>
+    
+        <nav >
+          
+            <div class="group custom-container">
+                <a href="#Home" class="custom-link">Home</a>
+                <div class="custom-line"></div>
+            </div>
+
+            <div class="group custom-container">
+                <a href="#Education" class="custom-link">Education</a>
+                <div class="custom-line"></div>
+            </div>
+
+            <div class="group custom-container">
+                <a href="#Skills" class="custom-link">Skills</a>
+                <div class="custom-line"></div>
+            </div>
+
+            <div class="group custom-container">
+                <a href="#Projects" class="custom-link">Projects</a>
+                <div class="custom-line"></div>
+            </div>
+
+            <div class="group custom-container">
+                <a href="#Contact" class="custom-link">Contact Me</a>
+                <div class="custom-line"></div>
+            </div>
+
         </nav>
+
     </header>
 
     <div id="Home" class="Page">
@@ -32,7 +61,7 @@
 
     </div>
 
-    <div class="Page" id="About_Me" >
+    <!-- <div class="Page" id="About_Me" >
         <div id="aboutinfo">
             <h1 ><span class="Big1-5">About Me</span></h1>
         
@@ -52,62 +81,86 @@
             </div>
         </div>
         
-        </div>
+        </div> -->
 
         <div class="Page" id="Education">
             <h1 ><span class="Big1-5">Education</span></h1>
-            <div class="eduOrg" id="eduOrg1">
-                <div class="eduOrgImg">
-                    <img src="./items/Manit.jpeg" alt="MACT">
-                </div>
 
-                <div class="eduOrgInfo">
-                    <h2>Maulana Azad National Institute of Technology, Bhopal</h2>
+            <div id="OrgCont">
+                <div class="eduOrg" id="eduOrg1">
+                    <div class="eduOrgImg">
+                        <img src="./items/Manit.jpeg" alt="MACT">
+                    </div>
+    
+                    <div class="eduOrgInfo">
+                        <h2>Maulana Azad National Institute of Technology, Bhopal</h2>
+                        <ul>
+                            <li>CGPA 8.60</li>
+                        </ul>
+                    </div>
+    
+                </div>
+                <div class="eduOrg" id="eduOrg2">
+                    <div class="eduOrgImg">
+                        <img src="./items/School.jpeg" alt="EHIS">
+                    </div>
+    
+                    <div class="eduOrgInfo">
+                        <h2>The Emerald Heights International School, Indore</h2>
                     <ul>
-                        <li>CGPA 8.60</li>
+                            <li>12th 96%</li>
+                            <li>10th 95.2%</li>
                     </ul>
+                    </div>
                 </div>
-
+                
+                
             </div>
-            <div class="eduOrg" id="eduOrg2">
-                <div class="eduOrgImg">
-                    <img src="./items/School.jpeg" alt="EHIS">
-                </div>
-
-                <div class="eduOrgInfo">
-                    <h2>The Emerald Heights International School, Indore</h2>
-                <ul>
-                        <li>12th 96%</li>
-                        <li>10th 95.2%</li>
-                </ul>
-                </div>
-
-            </div>
-
+            
         </div>
-
+        
         <div class="Page" id="Skills">
-            <h1><span class="Big1-5">Skills</span></h1>
-            <div class="skill" id="skill1">
-                <div  class="skillInfo">
-                    <h2>Wed Development</h2>
-                    <p>I learned basics of HTML and CSS form <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg">Code with Harry</a> and I am currently learning JavaScript from <a href="https://www.youtube.com/watch?v=zJSY8tbf_ys&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&index=5&ab_channel=freeCodeCamp.org">freeCodeCamp</a> </p>
-                    <p>I had made a <a href="">Get In Touch Form</a></p>
-                </div>
-                <div class="skillImg">
-                    <img class="skillImg" src="./items/Webd.png" alt="">
-                </div>
-            </div>
 
-            <div class="skill" id="skill2">
-                <div class="skillInfo" >
-                    <h2>Competitive Programming</h2>
-                    <p>I am also exploring Competitive Programming. I like to solve questions for logic building and I regularly give contests on <a href="https://codeforces.com/profile/tic_tac">Codeforces.com</a></p>
+                <h1><span class="Big1-5">Skills</span></h1>
+       
+                <div class="skill" id="skill1">
+                    <div  class="skillInfo">
+                        <h2>Wed Development</h2>
+                        <p>I learned basics of HTML and CSS form <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg">Code with Harry</a> and I am currently learning JavaScript from <a href="https://www.youtube.com/watch?v=zJSY8tbf_ys&list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88&index=5&ab_channel=freeCodeCamp.org">freeCodeCamp</a> </p>
+                        
+                    </div>
+                    <div class="skillImg">
+                        <img class="skillImg" src="./items/Webd.png" alt="">
+                    </div>
                 </div>
-                <div class="skillImg">
-                    <img src="./items/CP.jpeg" alt="">
+    
+                <div class="skill" id="skill2">
+    
+                    <div class="skillInfo" >
+                        <h2>Competitive Programming</h2>
+                        <p>I am also exploring Competitive Programming. I like to solve questions for logic building and I regularly give contests on <a href="https://codeforces.com/profile/tic_tac">Codeforces.com</a></p>
+                    </div>
+                    <div class="skillImg">
+                        <img src="./items/CP.jpeg" alt="">
+                    </div>
                 </div>
-            </div>
+                
+                <div id="Profile">
+
+                    <!-- <h1>Profiles</h1> -->
+
+                    <a href="https://leetcode.com/tic_tac/">
+                        <img src="./items/LC.jpeg" alt="Leetcode ID" class="ProLink">
+                    </a>
+                    <a href="https://codeforces.com/profile/tic_tac">
+                        <img src="./items/CF.jpeg" alt="Codeforces ID" class="ProLink">
+                    </a>
+                    <a href="https://www.codechef.com/users/tic_tac">
+                        <img src="./items/CC.jpeg" alt="CodeChef ID" class="ProLink">
+                    </a>
+                 
+                </div>
+            
 
         </div>
         <footer id="Contact">

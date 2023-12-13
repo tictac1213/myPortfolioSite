@@ -328,7 +328,7 @@ html {
         padding: 10px;
     }
     
-    footer{
+    .footer{
         display: flex;
         /* flex-direction: column; */
         justify-content: space-around;
@@ -338,13 +338,64 @@ html {
 
     }
 
-    footer img{
+    .footer img{
         
         height: 50px;
         width: 50px;
         border-radius: 4px;
     }
     
+   
+  
+    form {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    label {
+        color: #031d38;
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    
+
+    /* textarea:active,input:active {
+        background: rgb(3,14,42);
+        background: linear-gradient(90deg, rgba(3,14,42,1) 0%, rgb(2, 36, 78) 100%);
+    } */
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        color: #031d38;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    textarea{
+        resize: none;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+  
+    button:hover {
+        background-color: #0056b3;
+    }
 
 
 

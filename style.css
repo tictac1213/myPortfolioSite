@@ -15,6 +15,12 @@
     
     
 }
+
+body{
+    background: rgb(3,14,42);
+        background: linear-gradient(90deg, rgba(3,14,42,1) 0%, rgb(2, 36, 78) 100%);
+}
+
 .Big1-5{
     font-size: 1.5em;
 }
@@ -68,7 +74,7 @@ html {
     
         padding-left: 20%;
         display: flex;
-        width: 70vh;
+        width: 70vw;
         /* margin-right: 20px; */
         justify-content: space-around;
         /* align-content: space-; */
@@ -281,7 +287,7 @@ html {
         list-style-position: inside;
       }
 
-    .eduOrgImg {
+      .eduOrgImg {
         display: flex;
         justify-content: center;
         margin: 10px;
@@ -299,17 +305,24 @@ html {
         /* align-content: center; */
     }
     
+    @media (min-width:700px){
 
-    #Skills{
-        display: grid;
-        grid-column: 80vw 20vw;
-        grid-row: 1vh 45vh 45vh;
-        grid-template-areas: 
-        "head head"
-        "skill1 pro"
-        "skill2 pro";
+        #Skills{
+            display: grid;
+            grid-column: 80vw 20vw;
+            grid-row: 1vh 45vh 45vh;
+            grid-template-areas: 
+            "head head"
+            "skill1 pro"
+            "skill2 pro";
+        }
+
+        #Ids{
+            transform: rotate(90deg);
+            
+        }
     }
-
+        
     #Skills > h1{
         grid-area: head;
     }
@@ -340,10 +353,7 @@ html {
         /* margin-left: 30px; */
 
     }
-    #Ids{
-        transform: rotate(90deg);
-        
-    }
+    
     
     #Profile{
         
@@ -358,7 +368,8 @@ html {
 
     #Profile img{
 
-        height: 55px;
+        height: 65px;
+        width: 65px;
         border-radius: 4px;
 
     }
@@ -381,11 +392,14 @@ html {
     
     .footer{
         display: flex;
+        margin: auto;
         /* flex-direction: column; */
         justify-content: space-around;
-        padding: 20px;
-        background: rgb(3,14,42);
-        background: linear-gradient(90deg, rgba(3,14,42,1) 0%, rgb(2, 36, 78) 100%);
+       max-width:600px ;
+        /* gap: 50px; */
+        padding: 20px 0;
+        /* background: rgb(3,14,42); */
+        
 
     }
 
@@ -396,7 +410,10 @@ html {
         border-radius: 4px;
     }
     
-   
+   #Contact{
+    padding-top: 60px 20px 20px 20px;
+    height: 90vh;
+   }
   
     form {
         max-width: 400px;
@@ -456,6 +473,7 @@ html {
     }
     .navbar{
         justify-content:end;
+        z-index: 10;
     }
     .mobile-menu {
         display:inline-block ;
@@ -465,6 +483,7 @@ html {
         padding-right: 10px;
        
       }
+      
 
       #logo {
         float: left;
@@ -485,9 +504,112 @@ html {
     
       #mobile-nav {
         z-index: 130;
-        height: 80vh;
+        height: 75vh;
         width: 100vw;
         background-color: #031d38;
         opacity: 0.99;
       }
+
+      #Home{
+
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+      }
+
+      #Hbox{
+        width: 100vw;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    #intro{
+        text-align: center;
+        width: 100%;
+        /* margin-top: -50vh; */
+        height: 60vh;
+    }
+    
+    #Homeimg{
+        align-self: flex-start;
+          width: 100vw;
+        align-self: center;
+        height: 30vh;
+        padding-bottom: 0;
+        position: absolute;
+        top: 125px;
+        max-height: 30vh;
+
+      }
+      #Homeimg img{
+        z-index: -1;
+        max-height: 125px;
+        max-width: 125px;
+      }
+
+      #OrgCont{
+        flex-direction: column;
+        align-items: center;
+        height: 90vh;
+      }
+
+      .eduOrg{
+        width: 90vw;
+        height: 48%;
+            
+      }
+
+      .eduOrgImg{
+        height: 40%;
+        width: 60%;
+      }
+
+      #Education{
+        padding-top: 20px;
+        
+    }
+    .eduOrgInfo{
+        margin:0 ;
+        padding: 5px;
+    }
+    
+    #Skills{
+        padding: 60px 20px;
+          margin-top: 65px;
+          display: grid;
+         width: 100vw;
+          grid-row: 1vh 45vh 45vh;
+          grid-template-areas: 
+          "head "
+          "skill1"
+          "skill2"
+          "pro";
+
+      }
+
+      .skill{
+        width: 86vw;
+      }
+
+      .cover{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      #Profile{
+        flex-direction: row;
+        justify-content: space-around;
+        
+      }
+      #Profile a{
+        margin: 30px;
+      }
+
+
+      #Projects{
+        margin-top: 75px;
+      }
+      
 }

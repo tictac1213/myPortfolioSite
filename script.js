@@ -33,5 +33,21 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+let prevScrollPos = window.scrollY;
 
+window.onscroll = function() {
+  let currentScrollPos = window.scrollY;
+  const menuBar = document.querySelector("header");
 
+  // Show the navbar when scrolling up
+  if (prevScrollPos > currentScrollPos) {
+    menuBar.style.top = "0px";
+    // menuBar.classList.remove("hidden");
+  } else {
+    // Hide the navbar when scrolling down
+    menuBar.style.top = "auto"; // Adjust the value based on your navbar height
+    // menuBar.classList.add("hidden");
+  }
+
+  prevScrollPos = currentScrollPos;
+};

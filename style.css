@@ -59,6 +59,27 @@
     }
 }
 
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.animate-on-scroll.animate-in {
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
@@ -286,7 +307,7 @@ html {
 
     #Homeimg{
         width: 40%;
-        animation: slideInLeft 6s;
+        animation: slideInLeft 3s;
     }
 
     #Homeimg img{
@@ -536,6 +557,8 @@ html {
 
 
 @media (max-width:700px) {
+    
+
     nav{
         display: none;
     }
@@ -579,7 +602,7 @@ html {
       }
 
       #Home{
-
+        width: 100vw;
         flex-direction: column-reverse;
         margin: 0;
         padding: 0;
@@ -613,8 +636,8 @@ html {
       }
       #Homeimg img{
         z-index: -1;
-        max-height: 125px;
-        max-width: 125px;
+        max-height: 200px;
+        max-width: 200px;
       }
 
       #OrgCont{
@@ -635,6 +658,7 @@ html {
       }
 
       #Education{
+        /* width: 100vw; */
         padding-top: 20px;
         
     }
@@ -647,14 +671,14 @@ html {
         padding: 60px 20px;
           margin-top: 65px;
           display: grid;
-         width: 100vw;
+         /* width: 100vw; */
           grid-row: 1vh 45vh 45vh;
           grid-template-areas: 
           "head "
           "skill1"
           "skill2"
           "pro";
-
+       
       }
 
       .skill{
@@ -669,11 +693,10 @@ html {
       #Profile{
         flex-direction: row;
         justify-content: space-around;
+        gap: 30px;
         
       }
-      #Profile a{
-        margin: 30px;
-      }
+     
 
 
       #Projects{

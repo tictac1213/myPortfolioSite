@@ -291,12 +291,13 @@ html {
     #intro {
         width: 60%;
         animation: slideInRight 2s;
+        text-align: center;
         /* padding: 20%; */
     }
 
-    #Hbox>h1,
-    #Hbox>h4,
-    #Hbox>h3 {
+    #Hbox h1,
+    #Hbox h4,
+    #Hbox h3 {
         text-align: center;
         padding: 5px;
         margin: 5px;

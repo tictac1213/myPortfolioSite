@@ -13,8 +13,58 @@
     padding: 0px;
     font-family: 'Mullish';
     
-    
+    transition: all 0.2s;
 }
+
+
+
+
+@keyframes slideInDown{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
 
 body{
     background: rgb(3,14,42);
@@ -59,28 +109,35 @@ html {
         font-size: 1.25em;
         background-color: var(--navbar-color);
         color:var(--navbar-text);
-
+        
     }
-
+    
     #logo {
+        animation: slideInLeft 2s;
         float: left;
         position:absolute;
         left: 50px;
         background-color: var(--navbar-color);
         color:var(--navbar-text) ;
     }
-
-    nav {
     
+    nav {
+        
+       
         padding-left: 20%;
         display: flex;
         width: 70vw;
+        max-width: 600px;
         /* margin-right: 20px; */
         justify-content: space-around;
         /* align-content: space-; */
         background-color: var(--navbar-color);
         color:var(--navbar-text);
 
+    }
+
+    .custom-container{
+        animation: slideInUp 2s;
     }
 
     nav a {
@@ -96,7 +153,7 @@ html {
     
 
 
-    /* Add this to your existing CSS */
+    /* navbar for mobile */
 .mobile-menu {
     display: none;
   }
@@ -166,8 +223,9 @@ html {
       
     .group:hover .custom-link {
         color: var(--Hover-color);
+        transform: translateY(-7px);
     }
-      
+    
     .custom-line {
         position: absolute;
         bottom: 5px;
@@ -176,7 +234,8 @@ html {
         height: 2.5px;
         background-color: var(--Hover-color);
         display: none;
-        transition: all 0.2s;
+        transform: translateY(-10px);
+        transition: all 1s;
     }
       
     .group:hover .custom-line {
@@ -210,7 +269,7 @@ html {
     
     #intro {
         width: 60%;
-
+        animation: slideInRight 2s;
         /* padding: 20%; */
     }
 
@@ -227,6 +286,7 @@ html {
 
     #Homeimg{
         width: 40%;
+        animation: slideInLeft 6s;
     }
 
     #Homeimg img{
@@ -263,6 +323,11 @@ html {
         display: flex;
         justify-content: space-around;
         
+    }
+
+
+    .eduOrg:hover{
+        transform:scale(1.1) ;
     }
 
     .eduOrg{
@@ -309,7 +374,7 @@ html {
 
         #Skills{
             display: grid;
-            grid-column: 80vw 20vw;
+            grid-column: 70vw 30vw;
             grid-row: 1vh 45vh 45vh;
             grid-template-areas: 
             "head head"
@@ -317,10 +382,10 @@ html {
             "skill2 pro";
         }
 
-        #Ids{
+        /* #Ids{
             transform: rotate(90deg);
             
-        }
+        } */
     }
         
     #Skills > h1{
@@ -345,7 +410,7 @@ html {
     .cover{
         grid-area: pro;
         display: grid;
-        grid-template-columns:70% 30% ;
+        /* grid-template-columns:70% 30% ; */
         /* flex-direction: row-reverse; */
         /* justify-content: center; */
         align-items: center;
@@ -354,7 +419,10 @@ html {
 
     }
     
-    
+    #Ids{
+        text-align: center;
+    }
+
     #Profile{
         
         display: flex;
@@ -595,7 +663,7 @@ html {
 
       .cover{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
       }
 
       #Profile{

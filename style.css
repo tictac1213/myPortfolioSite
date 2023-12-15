@@ -98,16 +98,15 @@ body{
     font-size: 1.5em;
 }
 
-/* scroll effect */
+
 html {
    
-    /* Adjust the scroll speed by changing the duration value */
     --scroll-duration: 2s;
     --scroll-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --scroll-easing: var(--scroll-timing-function) var(--scroll-duration);
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-    /* scroll-behavior: var(--scroll-easing); */
+ 
   }
   
   

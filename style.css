@@ -126,7 +126,7 @@ html {
         background: linear-gradient(90deg, rgba(3,14,42,1) 0%, rgba(3, 44, 95,0.95) 100%);
         
           
-          
+        z-index: 1000; 
         display: flex;
         justify-content: space-around;
         height: 50px;

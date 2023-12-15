@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       mobileNav.style.display = (mobileNav.style.display === 'block') ? 'none' : 'flex';
     });
   
-    // Close the mobile menu when a link is clicked
+    
     mobileNav.addEventListener('click', function () {
       mobileNav.style.display = 'none';
     });
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.2 }); // You can adjust the threshold as needed
+    }, { threshold: 0.2 }); 
 
-    // Target elements with the class 'animate-on-scroll'
+    
     var elements = document.querySelectorAll('.animate-on-scroll');
 
     elements.forEach(function (element) {
@@ -39,14 +39,14 @@ window.onscroll = function() {
   let currentScrollPos = window.scrollY;
   const menuBar = document.querySelector("header");
 
-  // Show the navbar when scrolling up
+
   if (prevScrollPos > currentScrollPos) {
     menuBar.style.top = "0px";
-    // menuBar.classList.remove("hidden");
+    
   } else {
-    // Hide the navbar when scrolling down
-    menuBar.style.top = "auto"; // Adjust the value based on your navbar height
-    // menuBar.classList.add("hidden");
+   
+    menuBar.style.top = "auto"; 
+
   }
 
   prevScrollPos = currentScrollPos;
